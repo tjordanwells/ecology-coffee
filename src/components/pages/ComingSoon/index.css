@@ -1,0 +1,51 @@
+.container {
+  display: grid;
+  grid-template-columns: auto, auto, auto, auto;
+  grid-template-rows: auto, auto, auto, auto;
+}
+
+.logo {
+  width: 500px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+#text {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: rgb(238,65,58);
+  margin-top: -100px;
+}
+
+.icon {
+  margin-top: -100px;
+}
+
+.expand-link {
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  display: inline-block;
+}
+
+.expand-link::after {
+  content: "";
+  border-radius: 5px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.expand-link:hover,
+.expand-link:active {
+  -webkit-transform: scale(1.15, 1.15);
+  transform: scale(1.15, 1.15);
+  cursor: pointer;
+}
