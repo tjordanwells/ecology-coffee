@@ -7,7 +7,7 @@ import './index.css';
 
 function Splash() {
   return (
-    <Grid container>
+    <Grid container className='App'>
       <Grid item lg={12} />
       <Grid item lg={3} />
       <Grid item lg={6}>
