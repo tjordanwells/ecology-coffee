@@ -14,10 +14,10 @@ class App extends Component {
       <ParallaxProvider>
         <Router>
           <Switch>
-            <Route path="/" component={Splash} />
-            <Route path="/map-demo" component={HomePage} />
-            <Route path="/login" component={Login} />
-            <ProtectedRoute path="/locate" component={CloudLocater} />
+            <Route path="/" exact component={Splash} />
+            <Route path="/map-demo" exact component={HomePage} />
+            <Route path="/login" exact component={Login} />
+            <ProtectedRoute path="/locate" exact component={CloudLocater} />
           </Switch>
         </Router>
       </ParallaxProvider>
