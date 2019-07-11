@@ -6,22 +6,11 @@ import * as serviceWorker from "./serviceWorker";
 import { Auth0Provider } from "./utils/Auth0/Auth0Wrapper";
 import config from "./utils/Auth0/authConfig.json";
 
-const onRedirectCallback = appState => {
-  window.history.replaceState(
-    {},
-    document.title,
-    appState && appState.targetUrl
-      ? appState.targetUrl
-      : window.location.pathname
-  );
-};
-
 ReactDOM.render(
   <Auth0Provider
     domain={config.domain}
     client_id={config.clientId}
     redirect_uri={window.location.origin}
-    onRedirectCallback={onRedirectCallback}
   >
     <App />
   </Auth0Provider>,
