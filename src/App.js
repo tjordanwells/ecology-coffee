@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ParallaxProvider } from "react-scroll-parallax";
 
 import Splash from "../src/components/pages/ComingSoon";
@@ -13,10 +13,12 @@ class App extends Component {
     return (
       <ParallaxProvider>
         <Router>
-          <Route path="/" exact component={Splash} />
-          <Route path="/map-demo" exact component={HomePage} />
-          <Route path="/login" exact component={Login} />
-          <ProtectedRoute path="/locate" exact component={CloudLocater} />
+          <Switch>
+            <Route path="/" component={Splash} />
+            <Route path="/map-demo" component={HomePage} />
+            <Route path="/login" component={Login} />
+            <ProtectedRoute path="/locate" component={CloudLocater} />
+          </Switch>
         </Router>
       </ParallaxProvider>
     );
