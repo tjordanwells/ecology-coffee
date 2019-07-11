@@ -43,12 +43,12 @@ function Footer() {
         >
           <FontAwesomeIcon icon={faFacebook} size="lg" />
         </a>
-        <a className="icon" href="mailto:info@ecology.coffee">
+        <a className="icon" href="mailto:mike@ecology.coffee">
           <FontAwesomeIcon icon={faEnvelope} size="lg" />
         </a>
       </div>
       <div className="contact">
-        <p>info@ecology.coffee | 919.999.9999</p>
+        <p>mike@ecology.coffee | 919.999.9999</p>
       </div>
       <p className="copyright">Copyright 2019 | Ecology Coffee</p>
     </div>
