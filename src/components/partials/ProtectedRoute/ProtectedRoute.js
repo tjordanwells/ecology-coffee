@@ -5,10 +5,18 @@ import { useAuth0 } from "../../../utils/Auth0/Auth0Wrapper";
 const ProtectedRoute = ({ component: Component, ...rest }) => {
   const isAuthenticated = useAuth0();
 
-  const render = props =>
-    isAuthenticated === true ? <Component {...props} /> : <Redirect to="/" />;
-
-  return <Route render={render} {...rest} />;
+  return (
+    <Route
+      {...rest}
+      render={props => {
+        if (isAuthenticated === true) {
+          return <Component {...props} />;
+        } else {
+          return <Redirect to="/login" />;
+        }
+      }}
+    />
+  );
 };
 
 export default ProtectedRoute;
