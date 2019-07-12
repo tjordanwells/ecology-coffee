@@ -4,6 +4,7 @@ import { useAuth0 } from "../../../utils/Auth0/Auth0Wrapper";
 
 const PrivateRoute = ({ component: Component, path, ...rest }) => {
   const { isAuthenticated, loginWithRedirect } = useAuth0();
+  console.log(isAuthenticated);
 
   useEffect(() => {
     const fn = async () => {
