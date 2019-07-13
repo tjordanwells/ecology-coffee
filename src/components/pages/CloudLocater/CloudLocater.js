@@ -9,7 +9,9 @@ const CloudLocater = () => {
       {!isAuthenticated && (
         <button
           onClick={() =>
-            loginWithRedirect({ redirectUri: "http://localhost:3000/locate" })
+            loginWithRedirect({
+              redirectUri: "https://www.ecology.coffee/locate"
+            })
           }
         >
           Log in
