@@ -1,0 +1,24 @@
+{
+    "production": {
+        "username": "iz352fjjh7rbss19",
+        "password": "ty7bmneuuv8h2u3d",
+        "database": "lp21cxo38go6xqvr",
+        "host": "k3xio06abqa902qt.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        "port": 3306,
+        "dialect": "mysql",
+        "define": {
+            "timestamps": false
+        }
+    },
+    "development": {
+        "username": "root",
+        "password": "password",
+        "database": "test_db",
+        "host": "localhost",
+        "port": 3306,
+        "dialect": "mysql",
+        "define": {
+            "timestamps": false
+        }
+    }
+}

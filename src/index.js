@@ -4,7 +4,6 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { Auth0Provider } from "./utils/Auth0/Auth0Wrapper";
-import config from "./utils/Auth0/authConfig.json";
 
 const onRedirectCallback = appState => {
   window.history.replaceState(
@@ -18,9 +17,9 @@ const onRedirectCallback = appState => {
 
 ReactDOM.render(
   <Auth0Provider
-    domain={config.domain}
-    client_id={config.clientId}
-    redirect_uri={"https://ecology.coffee/locate"}
+    domain={process.env.REACT_APP_AUTH0_CLIENT_DOMAIN}
+    client_id={process.env.REACT_APP_AUTH0_CLIENT_ID}
+    redirect_uri={window.location.origin}
     onRedirectCallback={onRedirectCallback}
   >
     <App />
